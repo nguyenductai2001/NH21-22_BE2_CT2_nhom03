@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -38,27 +40,301 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-
+		<style>@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+			body,html {
+			  height:100%;
+			  margin:0;
+			  font-family:lato;
+			}
+			
+			h2 {
+			  margin-bottom:0px;
+			  margin-top:25px;
+			  text-align:center;
+			  font-weight:200;
+			  font-size:19px;
+			  font-size:1.2rem;
+			  
+			}
+			.checkout {
+			  height:100%;
+			  -webkit-box-pack:center;
+			  -webkit-justify-content:center;
+				  -ms-flex-pack:center;
+					  justify-content:center;
+			  -webkit-box-align:center;
+			  -webkit-align-items:center;
+				  -ms-flex-align:center;
+					  align-items:center;
+			  display:-webkit-box;
+			  display:-webkit-flex;
+			  display:-ms-flexbox;
+			  display:flex;
+			  background:-webkit-linear-gradient(#075991;, #075991;);
+			  background:linear-gradient(#075991;,#075991;);
+			}
+			.dropdown-select.visible {
+			  display:block;
+			}
+			.dropdown {
+			  position:relative;
+			}
+			ul {
+			  margin:0;
+			  padding:0;
+			}
+			ul li {
+			  list-style:none;
+			  padding-left:10px;
+			  cursor:pointer;
+			}
+			ul li:hover {
+			  background:rgba(255,255,255,0.1);
+			}
+			.dropdown-select {
+			  position:absolute;
+			  background:#77aaee;
+			  text-align:left;
+			  box-shadow:0px 3px 5px 0px rgba(0,0,0,0.1);
+			  border-bottom-right-radius:5px;
+			  border-bottom-left-radius:5px;
+			  width:90%;
+			  left:2px;
+			  line-height:2em;
+			  margin-top:2px;
+			  box-sizing:border-box;
+			}
+			.thin {
+			  font-weight:400;
+			}
+			.small {
+			  font-size:12px;
+			  font-size:.8rem;
+			}
+			.half-input-table {
+			  border-collapse:collapse;
+			  width:100%;
+			}
+			.half-input-table td:first-of-type {
+			  border-right:10px solid #4488dd;
+			  width:50%;
+			}
+			.window {
+			  height:540px;
+			  width:800px;
+			  background:#fff;
+			  display:-webkit-box;
+			  display:-webkit-flex;
+			  display:-ms-flexbox;
+			  display:flex;
+			  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.2);
+			  border-radius:30px;
+			  z-index:10;
+			}
+			.order-info {
+			  height:100%;
+			  width:50%;
+			  padding-left:25px;
+			  padding-right:25px;
+			  box-sizing:border-box;
+			  display:-webkit-box;
+			  display:-webkit-flex;
+			  display:-ms-flexbox;
+			  display:flex;
+			  -webkit-box-pack:center;
+			  -webkit-justify-content:center;
+				  -ms-flex-pack:center;
+					  justify-content:center;
+			  position:relative;
+			}
+			.price {
+			  bottom:0px;
+			  position:absolute;
+			  right:0px;
+			  color:#4488dd;
+			}
+			.order-table td:first-of-type {
+			  width:25%;
+			}
+			.order-table {
+				position:relative;
+			}
+			.line {
+			  height:1px;
+			  width:100%;
+			  margin-top:10px;
+			  margin-bottom:10px;
+			  background:#ddd;
+			}
+			.order-table td:last-of-type {
+			  vertical-align:top;
+			  padding-left:25px;
+			}
+			.order-info-content {
+			  table-layout:fixed;
+			
+			}
+			
+			.full-width {
+			  width:100%;
+			}
+			.pay-btn {
+			  border:none;
+			  background:#22b877;
+			  line-height:2em;
+			  border-radius:10px;
+			  font-size:19px;
+			  font-size:1.2rem;
+			  color:#fff;
+			  cursor:pointer;
+			  position:absolute;
+			  bottom:25px;
+			  width:calc(100% - 50px);
+			  -webkit-transition:all .2s ease;
+					  transition:all .2s ease;
+			}
+			.pay-btn:hover {
+			  background:#22a877;
+				color:#eee;
+			  -webkit-transition:all .2s ease;
+					  transition:all .2s ease;
+			}
+			
+			.total {
+			  margin-top:25px;
+			  font-size:20px;
+			  font-size:1.3rem;
+			  position:absolute;
+			  bottom:30px;
+			  right:27px;
+			  left:35px;
+			}
+			.dense {
+			  line-height:1.2em;
+			  font-size:16px;
+			  font-size:1rem;
+			}
+			.input-field {
+			  background:rgba(255,255,255,0.1);
+			  margin-bottom:10px;
+			  margin-top:3px;
+			  line-height:1.5em;
+			  font-size:20px;
+			  font-size:1.3rem;
+			  border:none;
+			  padding:5px 10px 5px 10px;
+			  color:#fff;
+			  box-sizing:border-box;
+			  width:100%;
+			  margin-left:auto;
+			  margin-right:auto;
+			}
+			.credit-info {
+			  background:#4488dd;
+			  height:100%;
+			  width:50%;
+			  color:#eee;
+			  -webkit-box-pack:center;
+			  -webkit-justify-content:center;
+				  -ms-flex-pack:center;
+					  justify-content:center;
+			  font-size:14px;
+			  font-size:.9rem;
+			  display:-webkit-box;
+			  display:-webkit-flex;
+			  display:-ms-flexbox;
+			  display:flex;
+			  box-sizing:border-box;
+			  padding-left:25px;
+			  padding-right:25px;
+			  border-top-right-radius:30px;
+			  border-bottom-right-radius:30px;
+			  position:relative;
+			}
+			.dropdown-btn {
+			  background:rgba(255,255,255,0.1);
+			  width:100%;
+			  border-radius:5px;
+			  text-align:center;
+			  line-height:1.5em;
+			  cursor:pointer;
+			  position:relative;
+			  -webkit-transition:background .2s ease;
+					  transition:background .2s ease;
+			}
+			.dropdown-btn:after {
+			  content: '\25BE';
+			  right:8px;
+			  position:absolute;
+			}
+			.dropdown-btn:hover {
+			  background:rgba(255,255,255,0.2);
+			  -webkit-transition:background .2s ease;
+					  transition:background .2s ease;
+			}
+			.dropdown-select {
+			  display:none;
+			}
+			.credit-card-image {
+			  display:block;
+			  max-height:80px;
+			  margin-left:auto;
+			  margin-right:auto;
+			  margin-top:35px;
+			  margin-bottom:15px;
+			}
+			.credit-info-content {
+			  margin-top:25px;
+			  -webkit-flex-flow:column;
+				  -ms-flex-flow:column;
+					  flex-flow:column;
+			  display:-webkit-box;
+			  display:-webkit-flex;
+			  display:-ms-flexbox;
+			  display:flex;
+			  width:100%;
+			}
+			@media (max-width: 600px) {
+			  .window {
+				width: 100%;
+				height: 100%;
+				display:block;
+				border-radius:0px;
+			  }
+			  .order-info {
+				width:100%;
+				height:auto;
+				padding-bottom:100px;
+				border-radius:0px;
+			  }
+			  .credit-info {
+				width:100%;
+				height:auto;
+				padding-bottom:100px;
+				border-radius:0px;
+			  }
+			  .pay-btn {
+				border-radius:0px;
+			  }
+			}</style>
     </head>
 	<body>
-		<!-- HEADER -->
-		<header>
+		  <!-- HEADER -->
+		  <header>
 			<!-- TOP HEADER -->
 			<div id="top-header">
-				<div class="container">
+				<div class="container" >
 					<ul class="header-links pull-left">
 						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
 						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
 						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
 					</ul>
 					<ul class="header-links pull-right">
-						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
 					</ul>
 				</div>
 			</div>
 			<!-- /TOP HEADER -->
-
+	
 			<!-- MAIN HEADER -->
 			<div id="header">
 				<!-- container -->
@@ -74,79 +350,38 @@
 							</div>
 						</div>
 						<!-- /LOGO -->
-
+	
 						<!-- SEARCH BAR -->
 						<div class="col-md-6">
 							<div class="header-search">
-								<form>
+								<form action="{{ url('search')}}" method="GET">
 									<select class="input-select">
 										<option value="0">All Categories</option>
 										<option value="1">Category 01</option>
 										<option value="1">Category 02</option>
 									</select>
-									<input class="input" placeholder="Search here">
-									<button class="search-btn">Search</button>
+									<input class="input" placeholder="Search here" name="key">
+									<button class="search-btn" value="Search">Search</button>
+									<ul id="search">
 								</form>
 							</div>
 						</div>
 						<!-- /SEARCH BAR -->
-
+	
 						<!-- ACCOUNT -->
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
 								<!-- Wishlist -->
 								<div>
-									<a href="#">
+									<a href="/like">
 										<i class="fa fa-heart-o"></i>
 										<span>Your Wishlist</span>
 										<div class="qty">2</div>
 									</a>
 								</div>
 								<!-- /Wishlist -->
-
-								<!-- Cart -->
-								<div class="dropdown">
-									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
-										<div class="qty">3</div>
-									</a>
-									<div class="cart-dropdown">
-										<div class="cart-list">
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="./img/product01.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
-
-											<div class="product-widget">
-												<div class="product-img">
-													<img src="./img/product02.png" alt="">
-												</div>
-												<div class="product-body">
-													<h3 class="product-name"><a href="#">product name goes here</a></h3>
-													<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
-												</div>
-												<button class="delete"><i class="fa fa-close"></i></button>
-											</div>
-										</div>
-										<div class="cart-summary">
-											<small>3 Item(s) selected</small>
-											<h5>SUBTOTAL: $2940.00</h5>
-										</div>
-										<div class="cart-btns">
-											<a href="#">View Cart</a>
-											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
-										</div>
-									</div>
-								</div>
-								<!-- /Cart -->
-
+	
+							
 								<!-- Menu Toogle -->
 								<div class="menu-toggle">
 									<a href="#">
@@ -167,41 +402,18 @@
 		</header>
 		<!-- /HEADER -->
 
-		<!-- NAVIGATION -->
-		<nav id="navigation">
-			<!-- container -->
-			<div class="container">
-				<!-- responsive-nav -->
-				<div id="responsive-nav">
-					<!-- NAV -->
-					<ul class="main-nav nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Hot Deals</a></li>
-						<li><a href="#">Categories</a></li>
-						<li><a href="#">Laptops</a></li>
-						<li><a href="#">Smartphones</a></li>
-						<li><a href="#">Cameras</a></li>
-						<li><a href="#">Accessories</a></li>
-					</ul>
-					<!-- /NAV -->
-				</div>
-				<!-- /responsive-nav -->
-			</div>
-			<!-- /container -->
-		</nav>
-		<!-- /NAVIGATION -->
 
-		<!-- BREADCRUMB -->
-		<div id="breadcrumb" class="section">
+		 <!-- BREADCRUMB -->
+		 <div id="breadcrumb" class="section">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
 				<div class="row">
 					<div class="col-md-12">
-						<h3 class="breadcrumb-header">Checkout</h3>
 						<ul class="breadcrumb-tree">
-							<li><a href="#">Home</a></li>
-							<li class="active">Checkout</li>
+							<li><a href="/index">Home</a></li>
+							<li><a href="#">MANUFACTURES</a></li>
+							<li><a href="#">NATIONAL</a></li>
 						</ul>
 					</div>
 				</div>
@@ -210,185 +422,78 @@
 			<!-- /container -->
 		</div>
 		<!-- /BREADCRUMB -->
+		<div class='container checkout'>
+			<div class='window'>
+			  <div class='order-info'>
+				<div class='order-info-content'>
+				  <h2>Order Summary</h2>
+						  <div class='line'></div>
+				
+				  <table class='order-table'>
+					<tbody>
+					  <tr>
+						<td><img src='/img/{{$image}}' class='full-width'></img>
+						</td>
+						<td>
+						  <br> <span class='thin'>{{$name}}</span>
+						  <br>sale {{$sale}} %<br> <span class='thin small'>{{$description}}<br><br></span>
+						</td>
+					  </tr>
+					  <tr>
+						<td>
+							<div class='quantity' value="0"></div>
+						</td>
+						<td>
+						  <div class='price'>{{$price}}</div>
+						</td>
+					  </tr>
+					</tbody>
+				  </table>
+				  <div class='line'></div>	
 
-		<!-- SECTION -->
-		<div class="section">
-			<!-- container -->
-			<div class="container">
-				<!-- row -->
-				<div class="row">
-
-					<div class="col-md-7">
-						<!-- Billing Details -->
-						<div class="billing-details">
-							<div class="section-title">
-								<h3 class="title">Billing address</h3>
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="first-name" placeholder="First Name">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="last-name" placeholder="Last Name">
-							</div>
-							<div class="form-group">
-								<input class="input" type="email" name="email" placeholder="Email">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="address" placeholder="Address">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="city" placeholder="City">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="country" placeholder="Country">
-							</div>
-							<div class="form-group">
-								<input class="input" type="text" name="zip-code" placeholder="ZIP Code">
-							</div>
-							<div class="form-group">
-								<input class="input" type="tel" name="tel" placeholder="Telephone">
-							</div>
-							<div class="form-group">
-								<div class="input-checkbox">
-									<input type="checkbox" id="create-account">
-									<label for="create-account">
-										<span></span>
-										Create Account?
-									</label>
-									<div class="caption">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
-										<input class="input" type="password" name="password" placeholder="Enter Your Password">
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- /Billing Details -->
-
-						<!-- Shiping Details -->
-						<div class="shiping-details">
-							<div class="section-title">
-								<h3 class="title">Shiping address</h3>
-							</div>
-							<div class="input-checkbox">
-								<input type="checkbox" id="shiping-address">
-								<label for="shiping-address">
-									<span></span>
-									Ship to a diffrent address?
-								</label>
-								<div class="caption">
-									<div class="form-group">
-										<input class="input" type="text" name="first-name" placeholder="First Name">
-									</div>
-									<div class="form-group">
-										<input class="input" type="text" name="last-name" placeholder="Last Name">
-									</div>
-									<div class="form-group">
-										<input class="input" type="email" name="email" placeholder="Email">
-									</div>
-									<div class="form-group">
-										<input class="input" type="text" name="address" placeholder="Address">
-									</div>
-									<div class="form-group">
-										<input class="input" type="text" name="city" placeholder="City">
-									</div>
-									<div class="form-group">
-										<input class="input" type="text" name="country" placeholder="Country">
-									</div>
-									<div class="form-group">
-										<input class="input" type="text" name="zip-code" placeholder="ZIP Code">
-									</div>
-									<div class="form-group">
-										<input class="input" type="tel" name="tel" placeholder="Telephone">
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- /Shiping Details -->
-
-						<!-- Order notes -->
-						<div class="order-notes">
-							<textarea class="input" placeholder="Order Notes"></textarea>
-						</div>
-						<!-- /Order notes -->
+				  <div class='total'>
+					<span style='float:left;'>
+					  TOTAL
+					</span>
+					<span style='float:right; text-align:right;' class="sum">
+					</span>
+				  </div>
+		  </div>
+		  </div>
+				  <div class='credit-info'>
+					<div class='credit-info-content'>
+					  <table class='half-input-table'>
+						<tr><td>Please select your card: </td><td><div class='dropdown' id='card-dropdown'><div class='dropdown-btn' id='current-card'>Visa</div>
+						  <div class='dropdown-select'>
+						  <ul>
+							<li>Master Card</li>
+							<li>American Express</li>
+							</ul></div>
+						  </div>
+						 </td></tr>
+					  </table>
+					  <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+					  Card Number
+					  <input class='input-field'></input>
+					  Card Holder
+					  <input class='input-field'></input>
+					  <table class='half-input-table'>
+						<tr>
+						  <td> Expires
+							<input class='input-field'></input>
+						  </td>
+						  <td>CVC
+							<input class='input-field'></input>
+						  </td>
+						</tr>
+					  </table>
+					  <button class='pay-btn'>Checkout</button>
+		  
 					</div>
-
-					<!-- Order Details -->
-					<div class="col-md-5 order-details">
-						<div class="section-title text-center">
-							<h3 class="title">Your Order</h3>
-						</div>
-						<div class="order-summary">
-							<div class="order-col">
-								<div><strong>PRODUCT</strong></div>
-								<div><strong>TOTAL</strong></div>
-							</div>
-							<div class="order-products">
-								<div class="order-col">
-									<div>1x Product Name Goes Here</div>
-									<div>$980.00</div>
-								</div>
-								<div class="order-col">
-									<div>2x Product Name Goes Here</div>
-									<div>$980.00</div>
-								</div>
-							</div>
-							<div class="order-col">
-								<div>Shiping</div>
-								<div><strong>FREE</strong></div>
-							</div>
-							<div class="order-col">
-								<div><strong>TOTAL</strong></div>
-								<div><strong class="order-total">$2940.00</strong></div>
-							</div>
-						</div>
-						<div class="payment-method">
-							<div class="input-radio">
-								<input type="radio" name="payment" id="payment-1">
-								<label for="payment-1">
-									<span></span>
-									Direct Bank Transfer
-								</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								</div>
-							</div>
-							<div class="input-radio">
-								<input type="radio" name="payment" id="payment-2">
-								<label for="payment-2">
-									<span></span>
-									Cheque Payment
-								</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								</div>
-							</div>
-							<div class="input-radio">
-								<input type="radio" name="payment" id="payment-3">
-								<label for="payment-3">
-									<span></span>
-									Paypal System
-								</label>
-								<div class="caption">
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								</div>
-							</div>
-						</div>
-						<div class="input-checkbox">
-							<input type="checkbox" id="terms">
-							<label for="terms">
-								<span></span>
-								I've read and accept the <a href="#">terms & conditions</a>
-							</label>
-						</div>
-						<a href="#" class="primary-btn order-submit">Place order</a>
-					</div>
-					<!-- /Order Details -->
+		  
+				  </div>
 				</div>
-				<!-- /row -->
-			</div>
-			<!-- /container -->
-		</div>
-		<!-- /SECTION -->
+			  </div>
 
 		<!-- NEWSLETTER -->
 		<div id="newsletter" class="section">
@@ -537,5 +642,15 @@
 		<script src="{{asset('js/nouislider.min.js')}}"></script>
 		<script src="{{asset('js/slick.min.js')}}"></script>
 
+		
 	</body>
+	<script>
+		var number = document.querySelector('.quantity');
+		var price = document.querySelector('.price');
+		var sum = document.querySelector('.sum');
+		window.onload = function(){
+			number.innerHTML = localStorage.getItem("storageName");
+			sum.innerHTML = number.innerHTML * price.innerHTML + "  VNĐ";
+		};
+	</script>
 </html>
